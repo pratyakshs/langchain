@@ -186,6 +186,7 @@ class ChatOpenAI(BaseChatModel):
     def _default_params(self) -> Dict[str, Any]:
         """Get the default parameters for calling OpenAI API."""
         return {
+            "temperature": self.temperature,
             "model": self.model_name,
             "request_timeout": self.request_timeout,
             "max_tokens": self.max_tokens,
